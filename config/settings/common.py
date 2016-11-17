@@ -99,9 +99,20 @@ MANAGERS = ADMINS
 # DATABASE CONFIGURATION
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
-DATABASES = {
-    'default': env.db('DATABASE_URL', default='postgres:///clp'),
-}
+#DATABASES = {
+#    'default': env.db('DATABASE_URL', default='postgres:///clp'),
+#}
+
+DATABASES = { 
+	'default': { 
+		'ENGINE': 'django.db.backends.postgresql_psycopg2', 
+		'NAME': 'cctestproject', 
+		'USER': 'aubreymoore', 
+		'PASSWORD': 'canada12', 
+		'HOST': '127.0.0.1', 
+		'PORT': '5432', 
+	}}
+
 DATABASES['default']['ATOMIC_REQUESTS'] = True
 
 
